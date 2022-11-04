@@ -1,19 +1,37 @@
-<div class="chip error">
-  <div class="chipContent">
-    <span class="material-symbols-rounded">
-      warning
-    </span>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
 
-    <label>
-      This website is still work in progress! It is expected to break.
-    </label>
-  </div>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-  <a onclick="ui.alerts.closeAlert(this)">
-    <span class="material-symbols-rounded">
-      close
-    </span>
-  </a>
-</div>
+    <title>example</title>
 
-<button onclick="ui.alerts.createAlert('info', 'This is an alert', ui.alerts.TYPE.)">Create new alert</button>
+    <link rel="stylesheet" href="./ui.css">
+  </head>
+  <body>
+    <div class="chip error">
+      <div class="chipContent">
+        <span class="material-symbols-rounded">
+          warning
+        </span>
+
+        <label>
+          This website is still work in progress! It is expected to break.
+        </label>
+      </div>
+
+      <a onclick="ui.alerts.closeAlert(this)">
+      <span class="material-symbols-rounded">
+        close
+      </span>
+      </a>
+    </div>
+
+    <div id="alerts"></div>
+
+    <button onclick="ui.alerts.createAlert('info', 'This is an alert', ui.alerts.TYPE.INFO, true, document.getElementById('alerts'))">Create new alert</button>
+
+    <script src="./ui.js"></script>
+  </body>
+</html>

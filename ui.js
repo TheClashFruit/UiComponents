@@ -17,30 +17,45 @@ const ui = {
       * ui.alerts.create('info', 'This is an alert', ui.alerts.TYPE.INFO, true, document.body);
       */
     createAlert: (icon, text, type, closable, parent) => {
-      const chipElement = document.createElement('div');
-      const chipIcon    = document.createElement('div');
-      const chipText    = document.createElement('div');
-      const chipClose   = document.createElement('div');
+      const chipElement        = document.createElement('div');
+      const chipContentElement = document.createElement('div');
+      const chipText           = document.createElement('div');
+      const chipClose          = document.createElement('a');
 
       chipElement.classList.add('chip');
       chipElement.classList.add(`${type}`);
 
-      chipIcon.classList.add('chipIcon');
+      chipContentElement.classList.add('chipContent');
+
       chipText.classList.add('chipText');
       chipClose.classList.add('chipClose');
 
-      chipIcon.innerHTML = `<i class='material-symbols-rounded'>${icon}</i>`;
+      const chipIcon = document.createElement('i');
+
+      chipIcon.classList.add('material-symbols-rounded');
+      chipIcon.innerHTML = `${icon}`;
+
       chipText.innerHTML = text;
       chipClose.innerHTML = `<i class='material-symbols-rounded'>close</i>`;
 
-      chipElement.appendChild(chipIcon);
-      chipElement.appendChild(chipText);
+      chipClose.addEventListener('click', () => {
+        chipElement.style = 'opacity: 0%;';
+
+        setTimeout(() => {
+          chipElement.remove();
+        }, 500);
+      });
+
+      chipContentElement.appendChild(chipIcon);
+      chipContentElement.appendChild(chipText);
+
+      chipElement.appendChild(chipContentElement);
 
       if (closable)
         chipElement.appendChild(chipClose);
 
       try {
-        $(parent).appendChild(chipElement);
+        parent.appendChild(chipElement);
 
         return true;
       } catch (e) {
@@ -61,7 +76,7 @@ const ui = {
     closeAlert: (e) => {
       e.parentElement.style = 'opacity: 0%;';
       setTimeout(() => {
-        e.parentElement.style = 'display: none;';
+        e.parentElement.remove();
       }, 500);
     },
 
