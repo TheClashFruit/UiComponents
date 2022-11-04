@@ -1,3 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&family=Noto+Sans&family=Noto+Sans+Mono&family=Noto+Color+Emoji&family=Nunito&display=swap');
+
+.material-symbols-rounded {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' -25, 'opsz' 48
+}
+
+///////////////////////////////////////////////
+
+$colorSuccess: #388E3C;
+$colorError: #D32F2F;
+$colorWarning: #FFA000;
+$colorInfo: #1976D2;
+
+$colorBackgroundLight: #f5f5f5;
+$colorBackgroundDark: #0a0a0a;
+
+$colorTextLight: #ffffff;
+$colorTextDark: #000000;
+
+$headerTags: ('h1': 1.5rem, 'h2': 1.4rem, 'h3': 1.3rem, 'h4': 1.2rem, 'h5': 1.1rem, 'h6': 1rem);
+
+///////////////////////////////////////////////
+
+* {
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Noto Sans', 'Noto Color Emoji', sans-serif;
+}
+
+pre, code {
+  font-family: 'Noto Sans Mono' , 'Noto Color Emoji', monospace;
+}
+
+@each $headerTag, $headerSize in $headerTags {
+  #{$headerTag} {
+    font-family: 'Nunito', sans-serif;
+    font-size: #{$headerSize};
+
+    margin-bottom: 6px;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  color: $colorInfo;
+
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  margin-bottom: 6px;
+}
+
+///////////////////////////////////////////////
+
 .chip {
   display: flex;
   align-items: center;
