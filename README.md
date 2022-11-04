@@ -9,7 +9,21 @@ My UI components that you can use for your own site.
 - [ ] Chips
 - [ ] Badges
 - [ ] Cards
-- [X] Forms
+- [-] Forms
+  - [x] Inputs
+  - [x] Textareas
+  - [ ] Selects
+  - [ ] Checkboxes
+  - [ ] Radio Buttons
+  - [ ] Switches
+  - [ ] Sliders
+  - [ ] Progress Bars
+  - [ ] Date Pickers
+  - [ ] Time Pickers
+  - [ ] File Pickers
+  - [ ] Color Pickers
+  - [ ] Autocomplete
+- [ ] Modals
 - [ ] Lists
 - [ ] Navigation
   - [ ] Navbar
