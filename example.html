@@ -30,7 +30,12 @@
 
     <div id="alerts"></div>
 
-    <button onclick="ui.alerts.createAlert('info', 'This is an alert', ui.alerts.TYPE.INFO, true, document.getElementById('alerts'))">Create new alert</button>
+    <button class="button info" onclick="ui.alerts.createAlert('info', 'This is an alert', ui.alerts.TYPE.INFO, true, document.getElementById('alerts'))">Create new alert</button>
+
+    <button class="button info">Info Button</button>
+    <button class="button success">Success Button</button>
+    <button class="button warning">Warning Button</button>
+    <button class="button error">Error Button</button>
 
     <script src="./ui.js"></script>
   </body>

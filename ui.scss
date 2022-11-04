@@ -11,6 +11,11 @@ $colorError: #D32F2F;
 $colorWarning: #FFA000;
 $colorInfo: #1976D2;
 
+$colorSuccessHover: #2E7D32;
+$colorErrorHover: #C62828;
+$colorWarningHover: #FF8F00;
+$colorInfoHover: #1565C0;
+
 $colorBackgroundLight: #f5f5f5;
 $colorBackgroundDark: #0a0a0a;
 
@@ -117,6 +122,56 @@ p {
       color: rgba(255, 255, 255, 1);
 
       text-decoration: none;
+    }
+  }
+}
+
+///////////////////////////////////////////////
+
+.button, button {
+  padding: 8px;
+  margin: 8px 0;
+
+  border-radius: 4px;
+  border: none;
+
+  transition: 100ms;
+
+  cursor: pointer;
+
+  &.warning {
+    background-color: $colorWarning;
+    color: $colorTextLight;
+
+    &:hover {
+      background-color: $colorWarningHover;
+    }
+  }
+
+  &.error {
+    background-color: $colorError;
+    color: $colorTextLight;
+
+    &:hover {
+      background-color: $colorErrorHover;
+    }
+  }
+
+  &.info {
+    background-color: $colorInfo;
+    color: $colorTextLight;
+
+    &:hover {
+      background-color: $colorInfoHover;
+    }
+  }
+
+  &.success {
+    background-color: $colorSuccess;
+    color: $colorTextLight;
+
+    &:hover {
+      background-color: $colorSuccessHover;
     }
   }
 }
