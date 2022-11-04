@@ -6,9 +6,10 @@ My UI components that you can use for your own site.
 
 - [x] Buttons
 - [x] Alerts
+- [ ] Chips
 - [ ] Badges
 - [ ] Cards
-- [ ] Forms
+- [X] Forms
 - [ ] Lists
 - [ ] Navigation
   - [ ] Navbar
