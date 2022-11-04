@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="./ui.css">
   </head>
   <body>
-    <div class="chip error">
-      <div class="chipContent">
+    <div class="alert error">
+      <div class="alertContent">
         <span class="material-symbols-rounded">
           warning
         </span>
 
         <label>
-          This website is still work in progress! It is expected to break.
+          This library is still under development.
         </label>
       </div>
 
@@ -32,10 +32,19 @@
 
     <button class="button info" onclick="ui.alerts.createAlert('info', 'This is an alert', ui.alerts.TYPE.INFO, true, document.getElementById('alerts'))">Create new alert</button>
 
-    <button class="button info">Info Button</button>
-    <button class="button success">Success Button</button>
-    <button class="button warning">Warning Button</button>
-    <button class="button error">Error Button</button>
+    <div class="buttons">
+      <button class="button primary">Primary Button</button>
+      <button class="button info">Info Button</button>
+      <button class="button success">Success Button</button>
+      <button class="button warning">Warning Button</button>
+      <button class="button error">Error Button</button>
+    </div>
+
+    <form class="form">
+      <input type="text" placeholder="Input">
+      <br />
+      <textarea placeholder="Textarea"></textarea>
+    </form>
 
     <script src="./ui.js"></script>
   </body>

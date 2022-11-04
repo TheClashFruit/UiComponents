@@ -1,3 +1,11 @@
+/**
+ *
+ * @param {string} _ - Selector(s).
+ *
+ * @description It's just `document.querySelector(_);`
+ *
+ * @returns {HTMLElement}
+ */
 const $ = (_) => document.querySelector(_);
 
 const ui = {
@@ -17,45 +25,45 @@ const ui = {
       * ui.alerts.create('info', 'This is an alert', ui.alerts.TYPE.INFO, true, document.body);
       */
     createAlert: (icon, text, type, closable, parent) => {
-      const chipElement        = document.createElement('div');
-      const chipContentElement = document.createElement('div');
-      const chipText           = document.createElement('div');
-      const chipClose          = document.createElement('a');
+      const alertElement        = document.createElement('div');
+      const alertContentElement = document.createElement('div');
+      const alertText           = document.createElement('div');
+      const alertClose          = document.createElement('a');
 
-      chipElement.classList.add('chip');
-      chipElement.classList.add(`${type}`);
+      alertElement.classList.add('alert');
+      alertElement.classList.add(`${type}`);
 
-      chipContentElement.classList.add('chipContent');
+      alertContentElement.classList.add('alertContent');
 
-      chipText.classList.add('chipText');
-      chipClose.classList.add('chipClose');
+      alertText.classList.add('alertText');
+      alertClose.classList.add('alertClose');
 
-      const chipIcon = document.createElement('i');
+      const alertIcon = document.createElement('i');
 
-      chipIcon.classList.add('material-symbols-rounded');
-      chipIcon.innerHTML = `${icon}`;
+      alertIcon.classList.add('material-symbols-rounded');
+      alertIcon.innerHTML = `${icon}`;
 
-      chipText.innerHTML = text;
-      chipClose.innerHTML = `<i class='material-symbols-rounded'>close</i>`;
+      alertText.innerHTML = text;
+      alertClose.innerHTML = `<i class='material-symbols-rounded'>close</i>`;
 
-      chipClose.addEventListener('click', () => {
-        chipElement.style = 'opacity: 0%;';
+      alertClose.addEventListener('click', () => {
+        alertElement.style = 'opacity: 0%;';
 
         setTimeout(() => {
-          chipElement.remove();
+          alertElement.remove();
         }, 500);
       });
 
-      chipContentElement.appendChild(chipIcon);
-      chipContentElement.appendChild(chipText);
+      alertContentElement.appendChild(alertIcon);
+      alertContentElement.appendChild(alertText);
 
-      chipElement.appendChild(chipContentElement);
+      alertElement.appendChild(alertContentElement);
 
       if (closable)
-        chipElement.appendChild(chipClose);
+        alertElement.appendChild(alertClose);
 
       try {
-        parent.appendChild(chipElement);
+        parent.appendChild(alertElement);
 
         return true;
       } catch (e) {
