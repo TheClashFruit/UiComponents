@@ -1,0 +1,61 @@
+.chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 8px;
+  margin: 8px 0;
+
+  border-radius: 4px;
+
+  transition: 500ms;
+
+  &.warning {
+    background-color: $colorWarning;
+    color: $colorTextLight;
+  }
+
+  &.error {
+    background-color: $colorError;
+    color: $colorTextLight;
+  }
+
+  &.info {
+    background-color: $colorInfo;
+    color: $colorTextLight;
+  }
+
+  &.success {
+    background-color: $colorSuccess;
+    color: $colorTextLight;
+  }
+
+  > .chipContent {
+    display: flex;
+    align-items: center;
+
+    > .material-symbols-rounded {
+      font-size: 1.5rem;
+      margin-right: 8px;
+    }
+  }
+
+  > a {
+    color: rgba(255, 255, 255, 0.6);
+
+    height: 24px;
+    width: 24px;
+
+    > .material-symbols-rounded {
+      font-size: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+
+      text-decoration: none;
+    }
+  }
+}
