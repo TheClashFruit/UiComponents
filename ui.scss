@@ -36,7 +36,6 @@ $headerTags: ('h1': 1.5rem, 'h2': 1.4rem, 'h3': 1.3rem, 'h4': 1.2rem, 'h5': 1.1r
   margin: 0;
 
   font-family: 'Noto Sans', 'Noto Color Emoji', sans-serif;
-  font-size: 0.93rem;
 }
 
 pre, code {
@@ -133,7 +132,7 @@ p {
   margin: 8px 0;
 
   border-radius: 4px;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 
   transition: 100ms;
 
@@ -172,14 +171,14 @@ input, textarea {
   margin: 0 0 8px 0;
 
   border-radius: 4px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
 
   transition: 100ms;
 
   &:focus {
     outline: none;
 
-    border: 2px solid $colorPrimary;
+    border: 1px solid $colorPrimary;
   }
 }
 
@@ -279,12 +278,12 @@ input[type='radio'] {
 
 ///////////////////////////////////////////////
 
-.button, button, .alert {
+.button, button, .alert, .chip {
   &.primary {
     background-color: $colorPrimary;
     color: $colorTextLight;
 
-    border: 2px solid $colorPrimaryDark;
+    border: 1px solid $colorPrimaryDark;
 
     &:hover {
       background-color: $colorPrimaryDark;
@@ -295,7 +294,7 @@ input[type='radio'] {
     background-color: $colorInfo;
     color: $colorTextLight;
 
-    border: 2px solid $colorInfoHover;
+    border: 1px solid $colorInfoHover;
 
     &:hover {
       background-color: $colorInfoHover;
@@ -306,7 +305,7 @@ input[type='radio'] {
     background-color: $colorSuccess;
     color: $colorTextLight;
 
-    border: 2px solid $colorSuccessHover;
+    border: 1px solid $colorSuccessHover;
 
     &:hover {
       background-color: $colorSuccessHover;
@@ -317,7 +316,7 @@ input[type='radio'] {
     background-color: $colorWarning;
     color: $colorTextLight;
 
-    border: 2px solid $colorWarningHover;
+    border: 1px solid $colorWarningHover;
 
     &:hover {
       background-color: $colorWarningHover;
@@ -328,10 +327,14 @@ input[type='radio'] {
     background-color: $colorError;
     color: $colorTextLight;
 
-    border: 2px solid $colorErrorHover;
+    border: 1px solid $colorErrorHover;
 
     &:hover {
       background-color: $colorErrorHover;
     }
   }
+}
+
+.chip {
+  border-radius: 24px;
 }
